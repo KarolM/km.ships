@@ -12,7 +12,7 @@ namespace km.guestline.battleships.Tests
         [TestMethod()]
         public void ToStringTest()
         {
-            Square s = new Square("B", 10);
+            Square s = new Square('B', 10);
             Assert.AreEqual("B10", s.ToString());
         }
     }

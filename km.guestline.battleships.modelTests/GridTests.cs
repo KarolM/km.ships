@@ -22,5 +22,14 @@ namespace km.guestline.battleships.Tests
             Assert.AreEqual(10, b.colSize);
             Assert.AreEqual(10, b.rowSize);                        
         }
+
+        [TestMethod()]
+        public void GridInitialize()
+        {
+            Grid b = new Grid();
+            Square s = b['A', 1];
+            Assert.AreEqual('A', s.Column);
+            Assert.AreEqual(1, s.Row);
+        }
     }
 }
