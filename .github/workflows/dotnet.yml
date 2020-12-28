@@ -17,6 +17,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.301
+    - name: set variables
+      run: export DOTNET_CLI_TELEMETRY_OPTOUT=1
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
