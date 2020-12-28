@@ -10,25 +10,26 @@ namespace km.guestline.battleships.model
         public Player Player2 { get; set; }
         public Player NextMoveBy { get; set; }
 
-        public Game(Player player1, Player player2, StartingPlayerEnum starter = StartingPlayerEnum.First)
+        public Game(Player player1, Player player2, StartingPlayerEnum starter = StartingPlayerEnum.Player1)
         {
             this.Player1 = player1;
             this.Player2 = player2;
 
             switch (starter)
             {
-                case StartingPlayerEnum.First:
+                case StartingPlayerEnum.Player1:
                     NextMoveBy = player1;
-                case StartingPlayerEnum.Second:
+                    break;
+                case StartingPlayerEnum.Player2:
                     NextMoveBy = player2;
-
+                    break;
             }
         }
 
         public enum StartingPlayerEnum
         {
-            First, 
-            Second
+            Player1, 
+            Player2
         }
     }
 }
