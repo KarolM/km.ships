@@ -14,9 +14,9 @@ namespace km.guestline.battleships.model.Tests
         {
             Player p1 = new Player();
             Player p2 = new Player();
-            Game g = new Game(p1, p2, Game.StartingPlayerEnum.Player1);
+            Game g = new Game(p1, p2, Game.StartingPlayer.Player1);
             Assert.AreEqual(g.NextMoveBy, p1);
-            g = new Game(p1, p2, Game.StartingPlayerEnum.Player2);
+            g = new Game(p1, p2, Game.StartingPlayer.Player2);
             Assert.AreEqual(g.NextMoveBy, p2);
         }
     }
