@@ -7,13 +7,20 @@ namespace km.guestline.battleships
 {
     public class Grid
     {
-        public int colSize { get; } = 10;
-        public int rowSize { get; } = 10;
+        public int colSize { get; private set; } = 10;
+        public int rowSize { get; private set; } = 10;
 
         private Dictionary<(char, int), Square> squares;
 
         public Grid()
         {
+            CreateSquares();
+        }
+
+        public Grid(int colSize, int rowSize)
+        {
+            this.colSize = colSize;
+            this.rowSize = rowSize;
             CreateSquares();
         }
 
@@ -24,7 +31,7 @@ namespace km.guestline.battleships
                 if (squares.TryGetValue((column, row), out Square s))
                     return s;
 
-                throw new Exception($"Cannot find square with address {column}{row}");
+                throw new ArgumentException($"Cannot find square with address {column}{row}");
             }
         }
 
