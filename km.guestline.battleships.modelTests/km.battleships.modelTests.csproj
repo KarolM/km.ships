@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\km.guestline.battleships.model\km.guestline.battleships.model.csproj" />
+    <ProjectReference Include="..\km.guestline.battleships.model\km.battleships.model.csproj" />
   </ItemGroup>
 
 </Project>
